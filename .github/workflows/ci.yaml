@@ -1,0 +1,26 @@
+name: mycity
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: test the code
+        script:
+          - echo "We are testing the code"
+          - npm install -g htmlhint
+          - htmlhint index.html
+
+      - name: deploy the code
+        script:
+          - echo "We are deploying the code"
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./public
+              publish_branch: main   
