@@ -11,14 +11,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: test the code
-        script:
-          - echo "We are testing the code"
-          - npm install -g htmlhint
-          - htmlhint index.html
+        run: |
+          echo "We are testing the code"
+          npm install -g htmlhint
+          htmlhint index.html
 
       - name: deploy the code
         uses: peaceiris/actions-gh-pages@v3
-          with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: ./public
-           publish_branch: main   
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
