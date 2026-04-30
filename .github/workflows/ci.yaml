@@ -17,8 +17,7 @@ jobs:
           - htmlhint index.html
 
       - name: deploy the code
-        script:
-          - echo "We are deploying the code"
+        steps:
             uses: peaceiris/actions-gh-pages@v3
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
