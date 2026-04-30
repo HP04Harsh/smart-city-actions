@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCity Gondia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>MyCity Gondia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h2>Welcome to MyCity Gondia</h2>
+            <p>Your gateway to a smart and sustainable future.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Our District</h2>
+            <p>Gondia is a district in the Indian state of Maharashtra, known for its rich cultural heritage and natural beauty.</p>
+
+            <!-- Metrics -->
+            <div class="metrics">
+
+                <div class="metric-card">
+                    <h3>Total District Area</h3>
+                    <p>5,431 km²</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Population</h3>
+                    <p>1.3 Million+</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Tehsils</h3>
+                    <p>8</p>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Major Industries</h3>
+                    <p>Rice Mills, Agriculture, Forestry</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>© 2026 MyCity Gondia | Designed for Smart City Digital Presence</p>
+    </footer>
+
+    <script>
+        // Simple Slider
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 4000);
+    </script>
+
+</body>
+</html>
