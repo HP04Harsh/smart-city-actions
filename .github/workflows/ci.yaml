@@ -17,9 +17,8 @@ jobs:
           - htmlhint index.html
 
       - name: deploy the code
-        steps:
-            uses: peaceiris/actions-gh-pages@v3
-            with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: ./public
-              publish_branch: main   
+        uses: peaceiris/actions-gh-pages@v3
+          with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: ./public
+           publish_branch: main   
